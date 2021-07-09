@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Box from '@/components/Box';
 import NavBar from '@/components/NavBar';
 import styled from 'styled-components';
@@ -7,23 +7,36 @@ import { entryAnimation, ethFieldAnimation, scrollAnimations } from './utils/ani
 
 const HomeComp = () => {
 
+    const [loading, setLoading] = useState(true);
+
     // eslint-disable-next-line max-len
     const subtext = "Web3.js is a collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.";
     const heading = "Interact Your Apps with the Ethereum Blockchain";
 
     useEffect(() => {
-        // eslint-disable-next-line no-undef
-        if (process.browser) {
-            ethFieldAnimation();
+        if (!loading) {
+            // eslint-disable-next-line no-undef
+            if (process.browser) {
+                ethFieldAnimation();
+            }
+            entryAnimation();
+            scrollAnimations();
         }
-        entryAnimation();
-        scrollAnimations();
+    }, [loading]);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 1000);
     });
+
+    if (loading) {
+        return <EthField className="ethField" zIndex={1} height="100vh" />
+    }
 
     return (
         <Box>
-            <EthField className="ethField" zIndex={1} height="100vh" />
-            <EthField className="ethField" zIndex={4} height="100vh" bg="white" />
+            <EthField className="ethField" zIndex={1} height="100vh" bg="white" />
             <NavBar />
             <Box column center textAlign="center" mx="1.8rem">
                 <Box

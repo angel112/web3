@@ -39,7 +39,7 @@ export const entryAnimation = function () {
         {
             autoAlpha: 1,
             y: 0,
-            duration: 0.4,
+            duration: 0.3,
             ease: "Power1.easeIn"
         }
         );
@@ -52,7 +52,7 @@ export const entryAnimation = function () {
             {
                 autoAlpha: 1,
                 y: 0,
-                duration: 0.4,
+                duration: 0.3,
                 ease: "Power1.easeIn",
                 delay: 0.1
             }
@@ -66,7 +66,7 @@ export const entryAnimation = function () {
                 {
                     autoAlpha: 1,
             y: 0,
-            duration: 0.4,
+            duration: 0.3,
             ease: "Power1.easeIn",
             delay: 0.2
         }
@@ -80,7 +80,7 @@ export const entryAnimation = function () {
             {
                 autoAlpha: 1,
                 y: 0,
-                duration: 0.4,
+                duration: 0.3,
                 ease: "Power1.easeIn",
                 delay: 0.3
             }
