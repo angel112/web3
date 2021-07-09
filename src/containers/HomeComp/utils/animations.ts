@@ -133,7 +133,8 @@ export const entryAnimation = function () {
             }
         });
             
-    gsap.fromTo(".modules-heading",
+    gsap.fromTo(
+        ".modules-heading",
         {
             autoAlpha: 0,
             y: 75
@@ -150,22 +151,36 @@ export const entryAnimation = function () {
         }
     );
             
-            [...Array(6)].forEach((v, i) => {
-                gsap.fromTo(`.card-${i}`,
-                    {
-                        autoAlpha: 0,
-                        y: 75
-                    },
-                    {
-                        autoAlpha: 1,
-                        y: 0,
-                        scrollTrigger: {
-                            trigger: `.card-${i}`,
-                            start: "top 80%"
-                        },
-                        duration: 0.2,
-                        ease: Power2.easeIn
-                    }
-                );
-            });
+    gsap.to(
+        ".navbar",
+        {
+            boxShadow: "none",
+            scrollTrigger: {
+                trigger: ".modules-section",
+                start: "top 15%",
+                scrub: true
+            },
+            duration: 0.2,
+            ease: Power2.easeOut
+        }
+    );
+            
+    [...Array(6)].forEach((v, i) => {
+        gsap.fromTo(`.card-${i}`,
+            {
+                autoAlpha: 0,
+                y: 75
+            },
+            {
+                autoAlpha: 1,
+                y: 0,
+                scrollTrigger: {
+                    trigger: `.card-${i}`,
+                    start: "top 80%"
+                },
+                duration: 0.2,
+                ease: Power2.easeIn
+            }
+        );
+    });
 }
