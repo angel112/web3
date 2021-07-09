@@ -111,7 +111,7 @@ export const entryAnimation = function () {
         {
             margin: "0 0",
             width: "100vw",
-            boxShadow: "0 0 1.5rem 0.5rem #f9f9f9, 0 0 1.5rem 1rem #fdfdfd",
+            boxShadow: "0 0 1.5rem 0.5rem #f9f9f9",
             background: "white",
             scrollTrigger: {
                 trigger: ".subtext",
@@ -131,4 +131,40 @@ export const entryAnimation = function () {
                 scrub: true
             }
         });
+            
+    gsap.fromTo(".modules-heading",
+        {
+            autoAlpha: 0,
+            y: 75
+        },
+        {
+            autoAlpha: 1,
+            y: 0,
+            scrollTrigger: {
+                trigger: ".modules-section",
+                start: "top 80%"
+            },
+            duration: 0.2,
+            ease: Power2.easeOut
+        }
+    );
+            
+            [...Array(6)].forEach((v, i) => {
+                gsap.fromTo(`.card-${i}`,
+                    {
+                        autoAlpha: 0,
+                        y: 75
+                    },
+                    {
+                        autoAlpha: 1,
+                        y: 0,
+                        scrollTrigger: {
+                            trigger: `.card-${i}`,
+                            start: "top 80%"
+                        },
+                        duration: 0.2,
+                        ease: Power2.easeIn
+                    }
+                );
+            });
 }

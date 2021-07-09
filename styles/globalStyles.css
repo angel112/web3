@@ -14,3 +14,14 @@ body, html {
 * {
     font-family: 'Secular One', sans-serif;
 }
+
+img {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+a {
+    text-decoration: none;
+}
