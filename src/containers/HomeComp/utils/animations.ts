@@ -1,4 +1,4 @@
-import { gsap } from 'gsap';
+import { gsap, Power1 } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -40,7 +40,7 @@ export const entryAnimation = function () {
             autoAlpha: 1,
             y: 0,
             duration: 0.3,
-            ease: "Power1.easeIn"
+            ease: Power1.easeOut
         }
         );
         gsap.fromTo(
@@ -53,7 +53,7 @@ export const entryAnimation = function () {
                 autoAlpha: 1,
                 y: 0,
                 duration: 0.3,
-                ease: "Power1.easeIn",
+                ease: Power1.easeOut,
                 delay: 0.1
             }
             );
@@ -67,7 +67,7 @@ export const entryAnimation = function () {
                     autoAlpha: 1,
             y: 0,
             duration: 0.3,
-            ease: "Power1.easeIn",
+            ease: Power1.easeOut,
             delay: 0.2
         }
         );
@@ -81,7 +81,7 @@ export const entryAnimation = function () {
                 autoAlpha: 1,
                 y: 0,
                 duration: 0.3,
-                ease: "Power1.easeIn",
+                ease: Power1.easeOut,
                 delay: 0.3
             }
             );
