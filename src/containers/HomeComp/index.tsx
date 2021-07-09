@@ -23,8 +23,8 @@ const HomeComp = () => {
         }
     });
 
-    const handleMouseMove = (e) => {
-        
+    const handleMouseMove = () => {
+    
     }
 
     return (
