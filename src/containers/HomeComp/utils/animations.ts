@@ -85,6 +85,7 @@ export const entryAnimation = function () {
                 delay: 0.3
             }
             );
+            // eslint-disable-next-line no-undef
             if (process.browser) {
                 window.scrollTo(0, 0);
             }

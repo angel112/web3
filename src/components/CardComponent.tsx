@@ -6,7 +6,7 @@ const CardComponent = ({ img, text, description, tag, href }:
     { img: string; text: string; description: string; tag: string; href: string }
 ) => {
     return (
-        <a href={href} target="_blank">
+        <a href={href} target="_blank" rel="noreferrer">
             <Card
                 column
                 className={`card-${tag}`}
