@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import React from 'react';
 import {
 	color,
 	flexbox,
@@ -56,7 +57,6 @@ export interface BoxProps
 	scrollBehavior?: 'auto' | 'smooth';
 	scrollMarginTop?: string;
 	objectFit?: 'cover' | 'fill' | 'contain' | 'none' | 'scale-down';
-	// eslint-disable-next-line prettier/prettier
 	outline?:
 	| 'dashed'
 	| 'dotted'
@@ -71,7 +71,6 @@ export interface BoxProps
 	backgroundRepeat?: 'no-repeat' | 'repeat' | 'repeat-x' | 'repeat-y' | 'round' | 'space';
 	backgroundPosition?: 'bottom' | 'center' | 'left' | 'right' | 'top';
 	backgroundSize?: 'auto' | 'contain' | 'cover';
-	// eslint-disable-next-line prettier/prettier
 	whiteSpace?:
 	| '-moz-pre-wrap'
 	| 'break-spaces'
@@ -94,7 +93,6 @@ export interface BoxProps
 	ref?: React.Ref<HTMLDivElement>;
 }
 
-// Note: Add custom Box Props here
 const customProps = {
 	boxShadow: {
 		property: 'boxShadow',
@@ -128,7 +126,8 @@ const customProps = {
 const customPropsStyleFn = system(customProps as any);
 
 const allBoxProps = { ...allStyledSystemProps, ...customProps };
-const filterStyledSytemProps = (prop, defaultValidatorFn) => (!allBoxProps[prop] && defaultValidatorFn(prop));
+const filterStyledSytemProps = (prop, defaultValidatorFn) =>
+	(!allBoxProps[prop] && defaultValidatorFn(prop));
 
 const Box = styled.div.withConfig({ shouldForwardProp: filterStyledSytemProps }) <BoxProps>`
 	${(props) =>
