@@ -23,6 +23,7 @@ const HomeComp = () => {
     return (
         <Box>
             <EthField className="ethField" zIndex={1} height="100vh" />
+            <EthField className="ethField" zIndex={4} height="100vh" bg="white" />
             <NavBar />
             <Box column center textAlign="center" mx="1.8rem">
                 <Box

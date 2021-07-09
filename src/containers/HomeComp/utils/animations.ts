@@ -30,8 +30,7 @@ export const ethFieldAnimation = function () {
 };
 
 export const entryAnimation = function () {
-    const tl = gsap.timeline();
-    tl.fromTo(
+    gsap.fromTo(
         ".heading",
         {
             autoAlpha: 0,
@@ -40,65 +39,72 @@ export const entryAnimation = function () {
         {
             autoAlpha: 1,
             y: 0,
-            duration: 0.3,
-            delay: 0.5
+            duration: 0.4,
+            ease: "Power1.easeIn"
         }
-    );
-    tl.fromTo(
-        ".subtext",
-        {
-            autoAlpha: 0,
-            y: 100
-        },
-        {
-            autoAlpha: 1,
+        );
+        gsap.fromTo(
+            ".subtext",
+            {
+                autoAlpha: 0,
+                y: 100
+            },
+            {
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.4,
+                ease: "Power1.easeIn",
+                delay: 0.1
+            }
+            );
+            gsap.fromTo(
+                ".cta",
+                {
+                    autoAlpha: 0,
+                    y: 100
+                },
+                {
+                    autoAlpha: 1,
             y: 0,
-            duration: 0.3,
+            duration: 0.4,
+            ease: "Power1.easeIn",
             delay: 0.2
         }
-    );
-    tl.fromTo(
-        ".cta",
-        {
-            autoAlpha: 0,
-            y: 100
-        },
-        {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.1
-        }
-    );
-    tl.fromTo(
-        ".smart-contract",
-        {
-            autoAlpha: 0,
-            y: 100
-        },
-        {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.1,
-            delay: 0.3
-        }
-    );
-};
-
-export const scrollAnimations = function () {
-    gsap.fromTo(".ethField", { autoAlpha: 1 }, {
-        autoAlpha: 0,
-        y: "-=100",
-        duration: 10,
-        scrollTrigger: {
-            trigger: ".subtext",
-            start: "top 50%",
-            end: "150% 50%",
-            scrub: true,
-        }
-    });
-
-    gsap.fromTo(".navbar",
-        {
+        );
+        gsap.fromTo(
+            ".smart-contract",
+            {
+                autoAlpha: 0,
+                y: 100
+            },
+            {
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.4,
+                ease: "Power1.easeIn",
+                delay: 0.3
+            }
+            );
+            if (process.browser) {
+                window.scrollTo(0, 0);
+            }
+        };
+        
+        export const scrollAnimations = function () {
+            gsap.fromTo(".ethField", { autoAlpha: 1 }, {
+                autoAlpha: 0,
+                y: "-=100",
+                duration: 10,
+                scrollTrigger: {
+                    trigger: ".subtext",
+                    start: "top 50%",
+                    end: "150% 50%",
+                    scrub: true,
+                }
+            });
+            
+            gsap.fromTo(".navbar",
+            {
             boxShadow: "0 0 1.5rem 0.5rem #ffffff, 0 0 1.5rem 1rem #ffffff",
             background: "white"
         },
