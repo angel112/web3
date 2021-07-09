@@ -4,15 +4,17 @@ import Box from '@/components/Box';
 const NavBar = () => {
     return (
         <Box
+            className="navbar"
             display="flex"
             flexDirection="column"
             alignItems="center"
-            pt="1.5rem"
             position="fixed"
             width="100vw"
-            zIndex={2}
+            zIndex={3}
         >
             <Box
+                className="nav"
+                mt="1.5rem"
                 mx={["1.8rem",]}
                 py={{ mobileXs: "1rem", tabletMd: "2rem" }}
                 fontSize="3rem"
@@ -22,7 +24,7 @@ const NavBar = () => {
                 px="1.5rem"
                 bg="white-100"
                 boxShadow="0 0 1.5rem 0.5rem #f9f9f9, 0 0 1.5rem 1rem #fdfdfd"
-                maxWidth={["100%", "110rem"]}
+                maxWidth={["80%", "110rem"]}
                 alignItems="center"
             >
                 <Box

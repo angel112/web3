@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import Box from '@/components/Box';
 import NavBar from '@/components/NavBar';
 import styled from 'styled-components';
-import { gsap } from 'gsap';
+import { entryAnimation, ethFieldAnimation, scrollAnimations } from './utils/animations';
+
 
 const HomeComp = () => {
 
@@ -13,71 +14,10 @@ const HomeComp = () => {
     useEffect(() => {
         // eslint-disable-next-line no-undef
         if (process.browser) {
-            const ethField = document.getElementsByClassName("ethField")[0];
-
-            [...Array(60)].forEach(() => {
-                const eth = document.createElement("img");
-                eth.setAttribute("src", "/eth.png");
-                eth.setAttribute("class", "star");
-                eth.style.height = "4rem";
-                eth.style.position = "absolute";
-                gsap.fromTo(
-                    eth,
-                    {
-                        scale: 0,
-                        autoAlpha: 0,
-                        x: gsap.utils.random(0, 2000, 100),
-                        y: gsap.utils.random(0, 1000, 150)
-                    },
-                    {
-                        scale: gsap.utils.random(8, 20, 1) / 10,
-                        autoAlpha: 0.1,
-                        duration: 1
-                    });
-                console.log("hello");
-                ethField.appendChild(eth);
-            });
+            ethFieldAnimation();
         }
-
-        const tl = gsap.timeline();
-        tl.fromTo(
-            ".heading",
-            {
-                autoAlpha: 0,
-                y: 100
-            },
-            {
-                autoAlpha: 1,
-                y: 0,
-                duration: 0.3,
-                delay: 0.5
-            }
-        );
-        tl.fromTo(
-            ".subtext",
-            {
-                autoAlpha: 0,
-                y: 100
-            },
-            {
-                autoAlpha: 1,
-                y: 0,
-                duration: 0.3,
-                delay: 0.2
-            }
-        );
-        tl.fromTo(
-            ".cta",
-            {
-                autoAlpha: 0,
-                y: 100
-            },
-            {
-                autoAlpha: 1,
-                y: 0,
-                duration: 0.1
-            }
-        );
+        entryAnimation();
+        scrollAnimations();
     });
 
     return (
@@ -88,7 +28,7 @@ const HomeComp = () => {
                 <Box
                     className="heading"
                     maxWidth="110rem"
-                    fontSize={{ mobileXs: "3.2rem", tabletMd: "6.8rem" }}
+                    fontSize={{ mobileXs: "3.2rem", tabletMd: "5rem" }}
                     mt={{ mobileXs: "14rem", tabletMd: "26rem" }}
                     color="purple-text"
                 >
@@ -119,6 +59,20 @@ const HomeComp = () => {
                         Documentation
                     </DocumentationButton>
                 </a>
+                <Box
+                    className="smart-contract"
+                    as="img"
+                    src="/smart-contract.png"
+                    alt=""
+                    height={{ mobileXs: "20rem", tabletMd: "60rem" }}
+                    zIndex={2}
+                />
+            </Box>
+            <Box bg="purple-text" center column color="white">
+                <Box width={{ mobileXs: "80%", tabletMd: "110rem" }} center column>
+                    <Box fontSize="8rem" mt="10rem">Modules</Box>
+                    <Box height="1rem" width="8rem" bg="white-100" borderRadius="1rem" />
+                </Box>
             </Box>
         </Box >
     );
@@ -136,6 +90,6 @@ const DocumentationButton = styled(Box)(() => `
 
 const EthField = styled(Box)(() => `
     position: fixed;
-
 `);
+
 export default HomeComp;
