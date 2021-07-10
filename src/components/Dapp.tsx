@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import Box from './Box';
 import { abi, contractAddress } from '@/utils/constants';
@@ -5,13 +6,10 @@ import Web3 from 'web3';
 
 
 const Dapp = () => {
-
     if (window.ethereum) {
-        window.web3 = new Web3(window.ethereum);
-        window.ethereum.enable();
+        window.web3 = new Web3(window?.ethereum);
+        window.ethereum.send('eth_requestAccounts');
     }
-
-
     // var web3 = new Web3(
     //     new Web3.providers.HttpProvider(
     //         'https://rinkeby.infura.io/v3/3a58c878defd4c7abec113ae093d056f'
@@ -39,9 +37,9 @@ const Dapp = () => {
         console.log("Data:", res);
     })
 
-    web3.eth.getBalance(contractAddress).then((data) => {
-        console.log("Balance:", data);
-    });
+    // window.web3.eth.getBalance(contractAddress).then((data) => {
+    //     console.log("Balance:", data);
+    // });
 
     // console.log("Contract", contract);
 
