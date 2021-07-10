@@ -143,7 +143,7 @@ const colors = {
 	'blue-05': '#231656',
 
 	'purple-text': '#352182',
-	'purple-100': '#1833DE',
+	'purple-100': '#060411',
 	'purple-50': '#c5cdfb',
 	'purple-25': '#e1e5ff',
 	'purple-15': '#eef0fd',

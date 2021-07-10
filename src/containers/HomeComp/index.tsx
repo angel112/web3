@@ -40,7 +40,7 @@ const HomeComp = () => {
         <Box>
             <EthField className="ethField" zIndex={1} height="100vh" bg="white" />
             <NavBar />
-            <Box column center textAlign="center" mx="1.8rem">
+            <Box column center textAlign="center" mx="1.8rem" pb="10rem">
                 <Box
                     className="heading"
                     maxWidth="110rem"
@@ -84,13 +84,75 @@ const HomeComp = () => {
                     zIndex={2}
                 />
             </Box>
-            <Box center column className="install-section">
-                <Box width={{ mobileXs: "80%", tabletMd: "110rem" }} center column>
+            <InstallGuide
+                pt={{ mobileXs: "5rem", tabletMd: "15rem" }}
+                px={{ mobileXs: "5rem", tabletMd: "8rem" }}
+                zIndex={5}
+                color="black"
+                center
 
+            >
+                <Box
+                    width={{ mobileXs: "80%", tabletMd: "110rem" }}
+                    display="flex"
+                    flexDirection={{ mobileXs: "column", tabletMd: "row" }}
+                    justifyContent={{ mobileXs: "center", tabletMd: "between" }}
+                >
+                    <Box>
+                        <Box
+                            fontSize={{ mobileXs: "2.4rem", tabletMd: "4rem" }}
+
+                        >
+                            Installation Guide
+                        </Box>
+                        <Box
+                            display="flex"
+                            flexDirection="column"
+                            fontSize={{ mobileXs: "1.6rem", tabletMd: "3rem" }}
+                            fontWeight="400"
+                            justifyContent={{ mobileXs: "flex-start", tabletMd: "space-between" }}
+                        >
+                            <Box mt={{ mobileXs: "1rem", tabletMd: "2rem" }}>
+                                yarn
+                                <Box
+                                    width={{ mobileXs: "20rem", tabletMd: "40rem" }}
+                                    borderRadius="1rem"
+                                    bg="purple-100"
+                                    py={{ mobileXs: "1rem", tabletMd: "2rem" }}
+                                    px={{ mobileXs: "2rem", tabletMd: "4rem" }}
+                                    mt={{ mobileXs: "1rem", tabletMd: "2rem" }}
+                                    fontSize={{ mobileXs: "1rem", tabletMd: "2rem" }}
+                                >
+                                    yarn add web3
+                                </Box>
+                            </Box>
+                            <Box mt={{ mobileXs: "1rem", tabletMd: "2rem" }}>
+                                npm
+                                <Box
+                                    width={{ mobileXs: "20rem", tabletMd: "40rem" }}
+                                    borderRadius="1rem"
+                                    bg="purple-100"
+                                    py={{ mobileXs: "1rem", tabletMd: "2rem" }}
+                                    px={{ mobileXs: "2rem", tabletMd: "4rem" }}
+                                    mt={{ mobileXs: "1rem", tabletMd: "2rem" }}
+                                    fontSize={{ mobileXs: "1rem", tabletMd: "2rem" }}
+                                >
+                                    npm install web3
+                                </Box>
+                            </Box>
+                        </Box>
+                    </Box>
+                    <Box
+                        as="img"
+                        src="/install.png"
+                        height={{ mobileXs: "auto", tabletMd: "60rem" }}
+                        width={{ mobileXs: "40rem", tabletMd: "wuto" }}
+
+                    />
                 </Box>
-            </Box>
+            </InstallGuide>
             <Box bg="purple-text" center column color="white" className="modules-section">
-                <Box width={{ mobileXs: "80%", tabletMd: "110rem" }} center column>
+                <Box width={{ mobileXs: "80%", tabletMd: "110rem" }} center column position="relative">
                     <Box className="modules-heading" center column>
                         <Box
                             fontSize={{ mobileXs: "3.2rem", tabletMd: "5rem" }}
@@ -106,7 +168,8 @@ const HomeComp = () => {
                         />
                     </Box>
                     <Box
-                        between
+                        display="flex"
+                        justifyContent={{ mobileXs: "center", tabletMd: "space-between" }}
                         flexWrap="wrap"
                         color="purple-text"
                         fontSize="2.4rem"
@@ -158,23 +221,32 @@ const HomeComp = () => {
                     </Box>
                 </Box>
             </Box >
-            <Dapp />
-        </Box>
+            {/* <Dapp /> */}
+        </Box >
     );
 }
 
 
 const DocumentationButton = styled(Box)(() => `
-            transition: transform ease-in 150ms;
-            transform-origin: 50% 50%;
+    transition: transform ease-in 150ms;
+    transform-origin: 50% 50%;
+    box-shadow: 0 0.3rem 0.5rem 0.1rem #000000;
+    font-family: inherit;
 
-            &:hover {
-                transform: scale(1.05);
-    }
-            `)
+    &:hover {
+        transform: scale(1.05);
+    }   
+`)
 
 const EthField = styled(Box)(() => `
-            position: fixed;
-            `);
+    position: fixed;
+`);
+
+const InstallGuide = styled(Box)(() => `
+    background: black;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    color: white;
+    font-family: 'Fira Code', monospace;
+`);
 
 export default HomeComp;
