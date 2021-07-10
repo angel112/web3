@@ -101,7 +101,6 @@ const HomeComp = () => {
                     <Box>
                         <Box
                             fontSize={{ mobileXs: "2.4rem", tabletMd: "4rem" }}
-
                         >
                             Installation Guide
                         </Box>
@@ -110,7 +109,7 @@ const HomeComp = () => {
                             flexDirection="column"
                             fontSize={{ mobileXs: "1.6rem", tabletMd: "3rem" }}
                             fontWeight="400"
-                            justifyContent={{ mobileXs: "flex-start", tabletMd: "space-between" }}
+                            justifyContent={{ mobileXs: "flex-start", tabletMd: "flex-end" }}
                         >
                             <Box mt={{ mobileXs: "1rem", tabletMd: "2rem" }}>
                                 yarn
@@ -145,9 +144,8 @@ const HomeComp = () => {
                     <Box
                         as="img"
                         src="/install.png"
-                        height={{ mobileXs: "auto", tabletMd: "60rem" }}
-                        width={{ mobileXs: "40rem", tabletMd: "wuto" }}
-
+                        height={{ mobileXs: "auto", tabletMd: "55rem" }}
+                        width={{ mobileXs: "40rem", tabletMd: "auto" }}
                     />
                 </Box>
             </InstallGuide>
