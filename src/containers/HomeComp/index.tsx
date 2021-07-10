@@ -84,6 +84,11 @@ const HomeComp = () => {
                     zIndex={2}
                 />
             </Box>
+            <Box center column className="install-section">
+                <Box width={{ mobileXs: "80%", tabletMd: "110rem" }} center column>
+
+                </Box>
+            </Box>
             <Box bg="purple-text" center column color="white" className="modules-section">
                 <Box width={{ mobileXs: "80%", tabletMd: "110rem" }} center column>
                     <Box className="modules-heading" center column>
