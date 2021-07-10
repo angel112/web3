@@ -24,7 +24,6 @@ export const ethFieldAnimation = function () {
                 autoAlpha: 0.1,
                 duration: 1
             });
-        console.log("hello");
         ethField.appendChild(eth);
     });
 };
