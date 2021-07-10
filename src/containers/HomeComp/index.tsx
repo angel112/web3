@@ -4,7 +4,7 @@ import NavBar from '@/components/NavBar';
 import styled from 'styled-components';
 import { entryAnimation, ethFieldAnimation, scrollAnimations } from './utils/animations';
 import CardComponent from '@/components/CardComponent';
-import Dapp from '@/components/Dapp';
+// import Dapp from '@/components/Dapp';
 
 
 const HomeComp = () => {
