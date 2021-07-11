@@ -32,7 +32,7 @@ const NavBar = () => {
                 position="fixed"
                 width="100%"
                 bg="white-100"
-                zIndex={2}
+                zIndex={4}
                 top={-500}
                 column
                 center
@@ -57,7 +57,7 @@ const NavBar = () => {
                 alignItems="center"
                 position="fixed"
                 width="100vw"
-                zIndex={3}
+                zIndex={4}
             >
                 <Box
                     className="nav"
@@ -115,6 +115,7 @@ const NavBar = () => {
                                 color="white-100"
                                 cursor="pointer"
                                 boxShadow="none"
+                                zIndex={4}
                             >
                                 Documentation
                             </DocumentationButton>
