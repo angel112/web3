@@ -102,7 +102,7 @@ const Section4 = () => {
                     mb={{ mobileXs: "0.5rem", desktopSm: "1.5rem" }}
                     color="purple-text"
                 >
-                    Enter Address of you Etherem Wallet:
+                    Enter Address of you Ethereum Wallet:
                 </Box>
                 <InputBox
                     className="scroll-animate"
