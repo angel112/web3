@@ -155,7 +155,7 @@ export const entryAnimation = function () {
         {
             boxShadow: "none",
             scrollTrigger: {
-                trigger: ".modules-section",
+                trigger: ".install",
                 start: "top 15%",
                 scrub: true
             },
@@ -176,6 +176,27 @@ export const entryAnimation = function () {
                 scrollTrigger: {
                     trigger: `.card-${i}`,
                     start: "top 80%"
+                },
+                duration: 0.2,
+                ease: Power2.easeIn
+            }
+        );
+    });
+            
+    const els = document.getElementsByClassName('scroll-animate');
+    [...Array(els.length)].forEach((v, i) => {
+        gsap.fromTo(
+            els[i],
+            {
+                autoAlpha: 0,
+                y: 75
+            },
+            {
+                autoAlpha: 1,
+                y: 0,
+                scrollTrigger: {
+                    trigger: i < 6 ? els[i] : els[5],
+                    start: "top 90%"
                 },
                 duration: 0.2,
                 ease: Power2.easeIn
