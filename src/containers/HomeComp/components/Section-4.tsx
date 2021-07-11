@@ -68,13 +68,13 @@ const Section4 = () => {
     return (
         <Box center id="s-4">
             <Box
-                width={{ mobileXs: "80%", tabletMd: "110rem" }}
-                py={{ mobileXs: "5rem", tabletMd: "8rem" }}
+                width={{ mobileXs: "80%", desktopSm: "110rem" }}
+                py={{ mobileXs: "5rem", desktopSm: "8rem" }}
                 column
             >
                 <Box
                     className="scroll-animate"
-                    fontSize={{ mobileXs: "3rem", tabletMd: "10rem" }}
+                    fontSize={{ mobileXs: "3rem", desktopSm: "10rem" }}
                     textAlign="center"
                     color="purple-100"
                 >
@@ -82,9 +82,9 @@ const Section4 = () => {
                 </Box>
                 <Box
                     className="scroll-animate"
-                    fontSize={{ mobileXs: "1.2rem", tabletMd: "1.8rem" }}
+                    fontSize={{ mobileXs: "1.2rem", desktopSm: "1.8rem" }}
                     fontFamily="Fira Code" bg="purple-15"
-                    p={{ mobileXs: "1rem", tabletMd: "1rem" }}
+                    p={{ mobileXs: "1rem", desktopSm: "1rem" }}
                     borderRadius="1rem"
                     border="1px solid"
                     borderColor="purple-50"
@@ -96,10 +96,10 @@ const Section4 = () => {
                 </Box>
                 <Box
                     className="scroll-animate"
-                    fontSize={{ mobileXs: "1.2rem", tabletMd: "2.4rem" }}
+                    fontSize={{ mobileXs: "1.2rem", desktopSm: "2.4rem" }}
                     fontFamily='Fira Code'
-                    mt={{ mobileXs: "1.5rem", tabletMd: "2.5rem" }}
-                    mb={{ mobileXs: "0.5rem", tabletMd: "1.5rem" }}
+                    mt={{ mobileXs: "1.5rem", desktopSm: "2.5rem" }}
+                    mb={{ mobileXs: "0.5rem", desktopSm: "1.5rem" }}
                     color="purple-text"
                 >
                     Enter Address of you Etherem Wallet:
@@ -112,9 +112,9 @@ const Section4 = () => {
                     maxLength="42"
                     minLength="42"
                     placeholder="0x.............."
-                    width={{ mobileXs: "30rem", tabletMd: "50rem" }}
-                    py={{ mobileXs: "1rem", tabletMd: "2rem" }}
-                    px={{ mobileXs: "1rem", tabletMd: "2rem" }}
+                    width={{ mobileXs: "25rem", desktopSm: "50rem" }}
+                    py={{ mobileXs: "1rem", desktopSm: "2rem" }}
+                    px={{ mobileXs: "1rem", desktopSm: "2rem" }}
                     fontFamily="Fira Code"
                     fontWeight="600"
                     border="1px solid"
@@ -124,10 +124,10 @@ const Section4 = () => {
                 ></InputBox>
                 <Box
                     className="scroll-animate"
-                    fontSize={{ mobileXs: "1.2rem", tabletMd: "2.4rem" }}
+                    fontSize={{ mobileXs: "1.2rem", desktopSm: "2.4rem" }}
                     fontFamily='Fira Code'
-                    mt={{ mobileXs: "1.5rem", tabletMd: "2.5rem" }}
-                    mb={{ mobileXs: "0.5rem", tabletMd: "1.5rem" }}
+                    mt={{ mobileXs: "1.5rem", desktopSm: "2.5rem" }}
+                    mb={{ mobileXs: "0.5rem", desktopSm: "1.5rem" }}
                     color="purple-text"
                 >
                     Enter Value to Change the Below data:
@@ -138,9 +138,9 @@ const Section4 = () => {
                     type="number"
                     value={value}
                     onChange={(e) => setvalue(e.target.value)}
-                    width={{ mobileXs: "20rem", tabletMd: "40rem" }}
-                    py={{ mobileXs: "1rem", tabletMd: "2rem" }}
-                    px={{ mobileXs: "1rem", tabletMd: "2rem" }}
+                    width={{ mobileXs: "20rem", desktopSm: "40rem" }}
+                    py={{ mobileXs: "1rem", desktopSm: "2rem" }}
+                    px={{ mobileXs: "1rem", desktopSm: "2rem" }}
                     fontFamily="Fira Code"
                     fontWeight="600"
                     border="1px solid"
@@ -154,12 +154,12 @@ const Section4 = () => {
                     bg="purple-text"
                     border="none"
                     disabled={!value || !senderAddress}
-                    py={{ mobileXs: "1rem", tabletMd: "2rem" }}
-                    width={{ mobileXs: "15rem", tabletMd: "15rem" }}
-                    mt={{ mobileXs: "2rem", tabletMd: "4rem" }}
+                    py={{ mobileXs: "1rem", desktopSm: "2rem" }}
+                    width={{ mobileXs: "15rem", desktopSm: "15rem" }}
+                    mt={{ mobileXs: "2rem", desktopSm: "4rem" }}
                     color="white"
                     fontFamily="inherit"
-                    fontSize={{ mobileXs: "1.6rem", tabletMd: "2.4rem" }}
+                    fontSize={{ mobileXs: "1.6rem", desktopSm: "2.4rem" }}
                     cursor="pointer"
                     borderRadius="0.5rem"
                     onClick={handleClick}
@@ -168,9 +168,9 @@ const Section4 = () => {
                 </SubmitButton>
                 <Box
                     className="scroll-animate number"
-                    fontSize={{ mobileXs: "4rem", tabletMd: "8rem" }}
+                    fontSize={{ mobileXs: "4rem", desktopSm: "8rem" }}
                     textAlign="center"
-                    mt={{ mobileXs: "2rem", tabletMd: "4rem" }}
+                    mt={{ mobileXs: "2rem", desktopSm: "4rem" }}
                 >
 
                 </Box>

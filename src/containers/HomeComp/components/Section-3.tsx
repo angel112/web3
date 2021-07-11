@@ -5,17 +5,17 @@ import CardComponent from '@/components/CardComponent';
 const Section3 = () => {
     return (
         <Box bg="purple-text" center column color="white" className="modules-section" id="s-3">
-            <Box width={{ mobileXs: "80%", tabletMd: "110rem" }} center column position="relative">
+            <Box width={{ mobileXs: "80%", desktopSm: "110rem" }} center column position="relative">
                 <Box className="modules-heading" center column>
                     <Box
-                        fontSize={{ mobileXs: "3.2rem", tabletMd: "5rem" }}
-                        mt={{ mobileXs: "5rem", tabletMd: "10rem" }}
+                        fontSize={{ mobileXs: "3.2rem", desktopSm: "5rem" }}
+                        mt={{ mobileXs: "5rem", desktopSm: "10rem" }}
                     >
                         Modules
                     </Box>
                     <Box
-                        height={{ mobileXs: "0.5rem", tabletMd: "1rem" }}
-                        width={{ mobileXs: "4rem", tabletMd: "8rem" }}
+                        height={{ mobileXs: "0.5rem", desktopSm: "1rem" }}
+                        width={{ mobileXs: "4rem", desktopSm: "8rem" }}
                         bg="white-100"
                         borderRadius="1rem"
                     />
