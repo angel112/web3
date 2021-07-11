@@ -37,7 +37,7 @@ const HomeComp = () => {
     }
 
     return (
-        <Box>
+        <Box overflow="hidden">
             <EthField className="ethField" zIndex={1} height="100vh" bg="white" />
             <NavBar />
             <Section1 />

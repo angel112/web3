@@ -98,7 +98,7 @@ export const entryAnimation = function () {
                 scrollTrigger: {
                     trigger: ".subtext",
                     start: "top 50%",
-                    end: "150% 50%",
+                    end: "200% 50%",
                     scrub: true,
                 }
             });

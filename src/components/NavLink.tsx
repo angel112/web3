@@ -1,18 +1,19 @@
 import React from 'react'
 import Box from '@/components/Box';
 
-const NavLink = (props) => {
+const NavLink = ({ children, n, ...props }) => {
     return (
-        <a href={`#${props.n}`} >
+        <a href={`#${n}`} >
             <Box
                 fontFamily="Fira Code"
                 fontSize="1.6rem"
-                display={{ mobileXs: "none", tabletMd: "block" }}
+                display={props.display ?? { mobileXs: "none", tabletMd: "block" }}
                 mr="2.4rem"
                 color="purple-50"
                 cursor="pointer"
+                {...props}
             >
-                {props.children}
+                {children}
             </Box>
         </a>
     )

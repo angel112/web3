@@ -11,14 +11,13 @@ const Section1 = () => {
 
 
     return (
-        <Box column center textAlign="center" mx="1.8rem" pb="10rem" id="s-1" >
+        <Box column center textAlign="center" mx="1.8rem" pb="10rem" id="s-1" overflow="hidden">
             <Box
                 className="heading"
                 maxWidth="110rem"
                 fontSize={{ mobileXs: "3.2rem", tabletMd: "5rem" }}
                 mt={{ mobileXs: "14rem", tabletMd: "26rem" }}
                 color="purple-text"
-                overflow="none"
             >
                 {heading}
             </Box>
@@ -40,8 +39,8 @@ const Section1 = () => {
                     p={{ mobileXs: "1rem", tabletMd: "2rem" }}
                     mt={{ mobileXs: "2rem", tabletMd: "4rem" }}
                     border="none"
-                    borderRadius="0.5rem"
                     color="white-100"
+                    borderRadius="0.5rem"
                     cursor="pointer"
                     boxShadow="0 0.3rem 0.5rem 0.1rem #000000"
                 >

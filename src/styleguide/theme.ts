@@ -1,7 +1,7 @@
 import { DefaultTheme } from 'styled-components';
 
 const breakpoints: DefaultTheme['breakpoints'] = [
-	'320px',
+	'319px',
 	'480px',
 	'576px',
 	'768px',
@@ -18,7 +18,7 @@ breakpoints.tabletLg = breakpoints[4]; // 992px
 breakpoints.tabletMd = breakpoints[3]; // 768px
 breakpoints.mobileMd = breakpoints[2]; // 576px
 breakpoints.mobileSm = breakpoints[1]; // 480px
-breakpoints.mobileXs = breakpoints[0]; // 320px
+breakpoints.mobileXs = breakpoints[0]; // 319px
 
 const mediaQueries = {
 	mobile: `@media screen and (max-width: ${breakpoints.tabletMd})`,
